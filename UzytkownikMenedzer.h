@@ -8,6 +8,7 @@
 #include <fstream>
 
 #include "Uzytkownik.h"
+#include "Adresat.h"
 #include "PlikZUzytkownikami.h"
 
 using namespace std;
@@ -18,6 +19,7 @@ class UzytkownikMenedzer
     PlikZUzytkownikami plikZUzytkownikami;
     int idZalogowanegoUzytkownika;
     vector <Uzytkownik> uzytkownicy;
+    vector <Adresat> adresaci;
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
 
@@ -28,6 +30,7 @@ class UzytkownikMenedzer
     void wypiszWszystkieDaneUzytkownika();
     void wczytajUzytkownikowZPliku();
     int logowanieUzytkownika();
+    void wylogowanieUzytkownika();
 };
 
 #endif

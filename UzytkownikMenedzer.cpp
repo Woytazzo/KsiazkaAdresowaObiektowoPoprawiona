@@ -107,3 +107,8 @@ int UzytkownikMenedzer::logowanieUzytkownika()
     system("pause");
     return 0;
 }
+void UzytkownikMenedzer::wylogowanieUzytkownika()
+{
+    idZalogowanegoUzytkownika = 0;
+    adresaci.clear();
+}

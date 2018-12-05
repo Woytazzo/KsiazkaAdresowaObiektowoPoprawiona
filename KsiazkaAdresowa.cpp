@@ -15,3 +15,8 @@ int KsiazkaAdresowa::logowanieUzytkownika()
     int id = uzytkownikMenedzer.logowanieUzytkownika();
     return id;
 }
+void KsiazkaAdresowa::wylogowanieUzytkownika()
+{
+    uzytkownikMenedzer.wylogowanieUzytkownika();
+    cout<<"nastapilo wylogowanie";
+}
