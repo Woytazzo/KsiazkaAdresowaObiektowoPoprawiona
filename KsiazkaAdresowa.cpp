@@ -18,5 +18,8 @@ int KsiazkaAdresowa::logowanieUzytkownika()
 void KsiazkaAdresowa::wylogowanieUzytkownika()
 {
     uzytkownikMenedzer.wylogowanieUzytkownika();
-    cout<<"nastapilo wylogowanie";
+}
+void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
+{
+    adresatMenedzer.wyswietlWszystkichAdresatow();
 }
