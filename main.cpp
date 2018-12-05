@@ -10,6 +10,7 @@ int main()
     //ksiazkaAdresowa.rejestracjaUzytkownika();
     //ksiazkaAdresowa.wypiszWszystkieDaneUzytkownika();
     int id = ksiazkaAdresowa.logowanieUzytkownika();
+    ksiazkaAdresowa.wylogowanieUzytkownika();
 
     return 0;
 }
