@@ -10,16 +10,21 @@ void KsiazkaAdresowa::wypiszWszystkieDaneUzytkownika()
     uzytkownikMenedzer.wypiszWszystkieDaneUzytkownika();
 }
 
-int KsiazkaAdresowa::logowanieUzytkownika()
+void KsiazkaAdresowa::logowanieUzytkownika()
 {
-    int id = uzytkownikMenedzer.logowanieUzytkownika();
-    return id;
+    uzytkownikMenedzer.logowanieUzytkownika();
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+       adresatMenedzer = new AdresatMenedzer(nazwaPlikuZAdresatami, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+    }
 }
 void KsiazkaAdresowa::wylogowanieUzytkownika()
 {
     uzytkownikMenedzer.wylogowanieUzytkownika();
+    delete adresatMenedzer;
+    adresatMenedzer = NULL;
 }
-void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
-{
-    adresatMenedzer.wyswietlWszystkichAdresatow();
-}
+//void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
+//{
+  //  adresatMenedzer.wyswietlWszystkichAdresatow();
+//}
