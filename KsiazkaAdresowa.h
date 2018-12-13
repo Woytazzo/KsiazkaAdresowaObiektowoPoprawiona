@@ -10,15 +10,22 @@ using namespace std;
 
 class KsiazkaAdresowa
 {
-UzytkownikMenedzer uzytkownikMenedzer;
-AdresatMenedzer adresatMenedzer;
+    UzytkownikMenedzer uzytkownikMenedzer;
+    AdresatMenedzer *adresatMenedzer;
+    const string nazwaPlikuZAdresatami;
 public:
-KsiazkaAdresowa(string nazwaPlikuZUzytkownikami): uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {uzytkownikMenedzer.wczytajUzytkownikowZPliku();};
-void rejestracjaUzytkownika();
-void wypiszWszystkieDaneUzytkownika();
-int logowanieUzytkownika();
-void wylogowanieUzytkownika();
-void wyswietlWszystkichAdresatow();
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string NAZWAPLIKUZADRESATAMI)
+    : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), nazwaPlikuZAdresatami(NAZWAPLIKUZADRESATAMI) {};
+    ~KsiazkaAdresowa()
+    {
+        delete adresatMenedzer;
+    }
+    void rejestracjaUzytkownika();
+    void wypiszWszystkieDaneUzytkownika();
+    void logowanieUzytkownika();
+    void wylogowanieUzytkownika();
+
+    //void wyswietlWszystkichAdresatow();
 };
 
 #endif

@@ -13,6 +13,7 @@ class MetodyPomocnicze
 public:
     MetodyPomocnicze();
     static string konwerjsaIntNaString(int liczba);
+    string wczytajLinie();
 };
 
 #endif
