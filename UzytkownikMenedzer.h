@@ -20,7 +20,6 @@ class UzytkownikMenedzer
     int idZalogowanegoUzytkownika;
     vector <Uzytkownik> uzytkownicy;
     Uzytkownik podajDaneNowegoUzytkownika();
-    //vector <Adresat> adresaci;
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
 

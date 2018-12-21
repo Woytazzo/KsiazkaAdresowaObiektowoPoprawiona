@@ -11,6 +11,7 @@
 #include "UzytkownikMenedzer.h"
 #include "PlikZUzytkownikami.h"
 #include "PlikZAdresatami.h"
+#include "MetodyPomocnicze.h"
 
 using namespace std;
 
@@ -18,11 +19,21 @@ class AdresatMenedzer
 {
 PlikZAdresatami plikZAdresatami;
 int idZalogowanegoUzytkownika;
+int idOstatniegoAdresata;
+MetodyPomocnicze metodyPomocnicze;
+vector <Adresat> adresaci;
 
+Adresat podajDaneNowegoAdresata();
+int pobierzIdOstatniegoAdresata();
 public:
 AdresatMenedzer(string NAZWAPLIKUZADRESATAMI, int IDZALOGOWANEGOUZYTKOWNIKA): plikZAdresatami(NAZWAPLIKUZADRESATAMI){
         idZalogowanegoUzytkownika=IDZALOGOWANEGOUZYTKOWNIKA;
-        //cout<<"ID: "<<idZalogowanegoUzytkownika<<endl;
+        plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, idZalogowanegoUzytkownika);
+        idOstatniegoAdresata=pobierzIdOstatniegoAdresata();
         };
+    void dodajAdresata();
+
+    void wyswietlDaneAdresata(Adresat adresat);
+    void wyswietlWszystkichAdresatow();
 };
 #endif

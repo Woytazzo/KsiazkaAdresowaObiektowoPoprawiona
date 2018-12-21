@@ -24,7 +24,23 @@ void KsiazkaAdresowa::wylogowanieUzytkownika()
     delete adresatMenedzer;
     adresatMenedzer = NULL;
 }
-//void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
-//{
-  //  adresatMenedzer.wyswietlWszystkichAdresatow();
-//}
+
+void KsiazkaAdresowa::dodajAdresata()
+{
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    adresatMenedzer->dodajAdresata();
+    else{
+        cout<<"Zaloguj sie na swoje konto"<<endl;
+        system("pause");
+    }
+}
+
+void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
+{
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    adresatMenedzer->wyswietlWszystkichAdresatow();
+    else{
+        cout<<"Zaloguj sie na swoje konto"<<endl;
+        system("pause");
+    }
+}

@@ -24,8 +24,8 @@ public:
     void wypiszWszystkieDaneUzytkownika();
     void logowanieUzytkownika();
     void wylogowanieUzytkownika();
-
-    //void wyswietlWszystkichAdresatow();
+    void dodajAdresata();
+    void wyswietlWszystkichAdresatow();
 };
 
 #endif
