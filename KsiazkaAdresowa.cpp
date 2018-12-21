@@ -44,3 +44,8 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
         system("pause");
     }
 }
+
+void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
+{
+    uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
+}

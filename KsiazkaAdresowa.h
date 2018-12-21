@@ -16,16 +16,17 @@ class KsiazkaAdresowa
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string NAZWAPLIKUZADRESATAMI)
     : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), nazwaPlikuZAdresatami(NAZWAPLIKUZADRESATAMI) {};
+
     ~KsiazkaAdresowa()
-    {
-        delete adresatMenedzer;
-    }
+    {delete adresatMenedzer;    }
+
     void rejestracjaUzytkownika();
     void wypiszWszystkieDaneUzytkownika();
     void logowanieUzytkownika();
     void wylogowanieUzytkownika();
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
+    void zmianaHaslaZalogowanegoUzytkownika();
 };
 
 #endif
