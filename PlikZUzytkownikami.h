@@ -22,6 +22,7 @@ public:
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
     bool czyPlikJestPusty(fstream &plikTekstowy);
     vector <Uzytkownik> wczytajUzytkownikowZPliku();
+    void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy);
 
 };
 #endif

@@ -35,6 +35,7 @@ class UzytkownikMenedzer
     void wylogowanieUzytkownika();
     int pobierzIdZalogowanegoUzytkownika();
     bool czyUzytkownikJestZalogowany();
+    void zmianaHaslaZalogowanegoUzytkownika();
 };
 
 #endif
