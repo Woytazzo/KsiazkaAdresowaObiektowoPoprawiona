@@ -77,7 +77,7 @@ void UzytkownikMenedzer::logowanieUzytkownika()
     Uzytkownik uzytkownik;
     string login = "", haslo = "";
 
-    cout << endl << "Podaj login: ";
+    cout << "Podaj login: ";
     cin >> login;
 
     vector <Uzytkownik>::iterator itr = uzytkownicy.begin();

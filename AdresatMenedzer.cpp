@@ -1,23 +1,6 @@
 #include "AdresatMenedzer.h"
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 void AdresatMenedzer::wyswietlWszystkichAdresatow()
 {
     system("cls");
@@ -48,7 +31,7 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
 }
 
-int AdresatMenedzer::dodajAdresata(int idZalogowanegoUzytkownika)
+void AdresatMenedzer::dodajAdresata()
 {
     Adresat adresat;
 
@@ -58,8 +41,9 @@ int AdresatMenedzer::dodajAdresata(int idZalogowanegoUzytkownika)
 
     adresaci.push_back(adresat);
     //dopiszAdresataDoPliku(adresat);
+    ++idOstatniegoAdresata;
 
-    return ++idOstatniegoAdresata;
+    return;
 }
 
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
@@ -68,14 +52,16 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 
     adresat.ustawId(++idOstatniegoAdresata);
     adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
-
+    system("CLS");
     cout << "Podaj imie: ";
     adresat.ustawImie(metodyPomocnicze.wczytajLinie());
-    //adresat.ustawImie(zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzImie()));
+
+    adresat.ustawImie(metodyPomocnicze.wczytajLinie());
+    adresat.ustawImie(metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzImie()));
 
     cout << "Podaj nazwisko: ";
     adresat.ustawNazwisko(metodyPomocnicze.wczytajLinie());
-    //adresat.ustawNazwisko(zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzNazwisko()));
+    adresat.ustawNazwisko(metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzNazwisko()));
 
     cout << "Podaj numer telefonu: ";
     adresat.ustawNumerTelefonu(metodyPomocnicze.wczytajLinie());
@@ -88,4 +74,27 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 
     return adresat;
 }
-*/
+
+int AdresatMenedzer::pobierzIdOstatniegoAdresata()
+{
+    idOstatniegoAdresata=0;
+    Adresat adresat;
+    if (!adresaci.empty())
+    {
+        for (int i=0; i<adresaci.size(); i++)
+        {
+            adresat=adresaci[i];
+
+            if(adresat.pobierzId()>idOstatniegoAdresata)
+            {
+                idOstatniegoAdresata=adresat.pobierzId();
+            }
+
+        }
+        cout << endl;
+
+    }
+
+    system("pause");
+    return idOstatniegoAdresata;
+}
