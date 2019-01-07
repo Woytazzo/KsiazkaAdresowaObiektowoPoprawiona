@@ -28,7 +28,7 @@ void KsiazkaAdresowa::wylogowanieUzytkownika()
 void KsiazkaAdresowa::dodajAdresata()
 {
     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
-    adresatMenedzer->dodajAdresata();
+        adresatMenedzer->dodajAdresata();
     else{
         cout<<"Zaloguj sie na swoje konto"<<endl;
         system("pause");
@@ -38,7 +38,7 @@ void KsiazkaAdresowa::dodajAdresata()
 void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 {
     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
-    adresatMenedzer->wyswietlWszystkichAdresatow();
+        adresatMenedzer->wyswietlWszystkichAdresatow();
     else{
         cout<<"Zaloguj sie na swoje konto"<<endl;
         system("pause");

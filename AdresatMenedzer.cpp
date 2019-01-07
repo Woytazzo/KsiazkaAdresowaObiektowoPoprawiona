@@ -40,8 +40,8 @@ void AdresatMenedzer::dodajAdresata()
     adresat = podajDaneNowegoAdresata();
 
     adresaci.push_back(adresat);
-    //dopiszAdresataDoPliku(adresat);
-    ++idOstatniegoAdresata;
+    plikZAdresatami.dopiszAdresataDoPliku(adresat);
+    plikZAdresatami.powiekszOJedenIdOstatniegoAdresata();
 
     return;
 }
@@ -50,7 +50,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
 
-    adresat.ustawId(++idOstatniegoAdresata);
+    adresat.ustawId((plikZAdresatami.pobierzIdOstatniegoAdresata()+1));
     adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
     system("CLS");
     cout << "Podaj imie: ";
@@ -75,7 +75,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
     return adresat;
 }
 
-int AdresatMenedzer::pobierzIdOstatniegoAdresata()
+/*int AdresatMenedzer::pobierzIdOstatniegoAdresata()
 {
     idOstatniegoAdresata=0;
     Adresat adresat;
@@ -98,3 +98,4 @@ int AdresatMenedzer::pobierzIdOstatniegoAdresata()
     system("pause");
     return idOstatniegoAdresata;
 }
+*/

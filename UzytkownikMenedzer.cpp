@@ -95,7 +95,7 @@ void UzytkownikMenedzer::logowanieUzytkownika()
                     idZalogowanegoUzytkownika = itr -> pobierzId();
                     cout << endl << "Zalogowales sie." << endl << endl;
 
-                    system("pause");
+                    //system("pause");
                     return;
                 }
             }

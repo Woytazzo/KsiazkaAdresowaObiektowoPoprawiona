@@ -18,6 +18,7 @@ public:
     string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
     int konwersjaStringNaInt(string liczba);
     string pobierzLiczbe(string tekst, int pozycjaZnaku);
+    bool czyPlikJestPusty(fstream &plikTekstowy);
 
 };
 
