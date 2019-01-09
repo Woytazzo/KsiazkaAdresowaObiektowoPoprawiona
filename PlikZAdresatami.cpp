@@ -117,6 +117,7 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
     {
         cout << "Nie udalo sie otworzyc pliku i zapisac w nim danych." << endl;
     }
+    ++idOstatniegoAdresata;
     system("pause");
 }
 
@@ -138,7 +139,4 @@ int PlikZAdresatami::pobierzIdOstatniegoAdresata()
 {
     return idOstatniegoAdresata;
 }
-void PlikZAdresatami::powiekszOJedenIdOstatniegoAdresata()
-{
-    ++idOstatniegoAdresata;
-}
+

@@ -19,21 +19,22 @@ class AdresatMenedzer
 {
 PlikZAdresatami plikZAdresatami;
 int idZalogowanegoUzytkownika;
-//int idOstatniegoAdresata;
 MetodyPomocnicze metodyPomocnicze;
 vector <Adresat> adresaci;
 Adresat podajDaneNowegoAdresata();
-//int pobierzIdOstatniegoAdresata();
+void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 
 public:
 AdresatMenedzer(string NAZWAPLIKUZADRESATAMI, int IDZALOGOWANEGOUZYTKOWNIKA): plikZAdresatami(NAZWAPLIKUZADRESATAMI){
         idZalogowanegoUzytkownika=IDZALOGOWANEGOUZYTKOWNIKA;
         plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
-        //idOstatniegoAdresata=pobierzIdOstatniegoAdresata();
+
         };
     void dodajAdresata();
-
     void wyswietlDaneAdresata(Adresat adresat);
     void wyswietlWszystkichAdresatow();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
+
 };
 #endif

@@ -49,3 +49,23 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
 {
     uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
 }
+
+void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
+{
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+        adresatMenedzer->wyszukajAdresatowPoImieniu();
+    else{
+        cout<<"Zaloguj sie na swoje konto"<<endl;
+        system("pause");
+    }
+}
+
+void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
+{
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+        adresatMenedzer->wyszukajAdresatowPoNazwisku();
+    else{
+        cout<<"Zaloguj sie na swoje konto"<<endl;
+        system("pause");
+    }
+}
