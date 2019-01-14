@@ -20,6 +20,7 @@ public:
     string pobierzLiczbe(string tekst, int pozycjaZnaku);
     bool czyPlikJestPusty(fstream &plikTekstowy);
 
+
 };
 
 #endif

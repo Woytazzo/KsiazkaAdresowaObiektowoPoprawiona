@@ -57,3 +57,4 @@ bool MetodyPomocnicze::czyPlikJestPusty(fstream &plikTekstowy)
     else
         return false;
 }
+

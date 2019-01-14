@@ -23,6 +23,9 @@ MetodyPomocnicze metodyPomocnicze;
 vector <Adresat> adresaci;
 Adresat podajDaneNowegoAdresata();
 void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
+int podajIdWybranegoAdresata();
+char wczytajZnak();
+int wczytajLiczbeCalkowita();
 
 public:
 AdresatMenedzer(string NAZWAPLIKUZADRESATAMI, int IDZALOGOWANEGOUZYTKOWNIKA): plikZAdresatami(NAZWAPLIKUZADRESATAMI){
@@ -35,6 +38,7 @@ AdresatMenedzer(string NAZWAPLIKUZADRESATAMI, int IDZALOGOWANEGOUZYTKOWNIKA): pl
     void wyswietlWszystkichAdresatow();
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
+    void usunAdresata();
 
 };
 #endif
