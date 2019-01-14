@@ -48,8 +48,9 @@ void AdresatMenedzer::dodajAdresata()
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
-
-    adresat.ustawId((plikZAdresatami.pobierzIdOstatniegoAdresata()+1));
+    cout<<"id ostatniego adresata: "<<plikZAdresatami.pobierzIdOstatniegoAdresata()<<endl;
+    system("pause");
+    adresat.ustawId((plikZAdresatami.pobierzIdOstatniegoAdresata())+1);
     adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
     system("CLS");
     cout << "Podaj imie: ";
@@ -167,7 +168,9 @@ void AdresatMenedzer::usunAdresata()
             znak = wczytajZnak();
             if (znak == 't')
             {
-                //numerLiniiUsuwanegoAdresata = plikZAdresatami.zwrocNumerLiniiSzukanegoAdresata(idUsuwanegoAdresata);
+                numerLiniiUsuwanegoAdresata = plikZAdresatami.zwrocNumerLiniiSzukanegoAdresata(idUsuwanegoAdresata);
+                cout<<numerLiniiUsuwanegoAdresata<<endl;
+                system("pause");
                 //plikZAdresatami.usunWybranaLinieWPliku(numerLiniiUsuwanegoAdresata);
                 itr = adresaci.erase(itr);
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;

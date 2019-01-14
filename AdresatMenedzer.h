@@ -30,8 +30,7 @@ int wczytajLiczbeCalkowita();
 public:
 AdresatMenedzer(string NAZWAPLIKUZADRESATAMI, int IDZALOGOWANEGOUZYTKOWNIKA): plikZAdresatami(NAZWAPLIKUZADRESATAMI){
         idZalogowanegoUzytkownika=IDZALOGOWANEGOUZYTKOWNIKA;
-        plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
-
+        adresaci=plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
         };
     void dodajAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
