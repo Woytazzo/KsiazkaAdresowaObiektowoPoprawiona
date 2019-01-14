@@ -28,5 +28,9 @@ vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowaneg
 void dopiszAdresataDoPliku(Adresat adresat);
 string zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKreskami(Adresat adresat);
 int pobierzIdOstatniegoAdresata();
+int zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
+void usunWybranaLinieWPliku(int numerUsuwanejLinii);
+void ustawIdOstatniegoAdresata (int id);
+
 };
 #endif

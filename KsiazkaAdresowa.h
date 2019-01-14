@@ -29,6 +29,7 @@ public:
     void zmianaHaslaZalogowanegoUzytkownika();
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
+    void usunAdresata();
 };
 
 #endif

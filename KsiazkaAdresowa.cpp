@@ -69,3 +69,13 @@ void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
         system("pause");
     }
 }
+
+void KsiazkaAdresowa::usunAdresata()
+{
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+        adresatMenedzer->usunAdresata();
+    else{
+        cout<<"Zaloguj sie na swoje konto"<<endl;
+        system("pause");
+    }
+}
