@@ -33,6 +33,7 @@ int pobierzIdOstatniegoAdresata();
 int zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
 void usunWybranaLinieWPliku(int numerUsuwanejLinii);
 void ustawIdOstatniegoAdresata (int id);
+void edytujWybranaLinieWPliku(int numerEdytowanejLinii, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
 
 };
 #endif
