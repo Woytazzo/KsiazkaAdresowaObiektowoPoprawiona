@@ -79,3 +79,13 @@ void KsiazkaAdresowa::usunAdresata()
         system("pause");
     }
 }
+
+void KsiazkaAdresowa::edytujAdresata()
+{
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+        adresatMenedzer->edytujAdresata();
+    else{
+        cout<<"Zaloguj sie na swoje konto"<<endl;
+        system("pause");
+    }
+}

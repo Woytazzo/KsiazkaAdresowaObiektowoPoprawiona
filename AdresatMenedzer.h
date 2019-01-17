@@ -26,6 +26,8 @@ void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 int podajIdWybranegoAdresata();
 char wczytajZnak();
 int wczytajLiczbeCalkowita();
+char wybierzOpcjeZMenuEdycja();
+void zaktualizujDaneEdytowanegoAdresata(Adresat adresat, int idEdytowanegoAdresata);
 
 public:
 AdresatMenedzer(string NAZWAPLIKUZADRESATAMI, int IDZALOGOWANEGOUZYTKOWNIKA): plikZAdresatami(NAZWAPLIKUZADRESATAMI){
@@ -38,6 +40,7 @@ AdresatMenedzer(string NAZWAPLIKUZADRESATAMI, int IDZALOGOWANEGOUZYTKOWNIKA): pl
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
     void usunAdresata();
+    void edytujAdresata();
 
 };
 #endif
