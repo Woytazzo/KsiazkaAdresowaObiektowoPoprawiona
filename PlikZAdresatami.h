@@ -19,6 +19,8 @@ int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdre
 Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
 int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
 int idOstatniegoAdresata;
+void usunOdczytywanyPlik(string nazwaPlikuZRozszerzeniem);
+void zmienNazweTymczasowegoPlikuNaNazweOdczytywanegoPliku(string nazwaTymczasowegoPlikuZRozszerzeniem, string nazwaPlikuZRozszerzeniem);
 
 public:
 PlikZAdresatami(string PLIKZADRESATAMI) : nazwaPlikuZAdresatami(PLIKZADRESATAMI){
