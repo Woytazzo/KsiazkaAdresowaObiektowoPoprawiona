@@ -48,15 +48,15 @@ void AdresatMenedzer::dodajAdresata()
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
-    cout<<"id ostatniego adresata: "<<plikZAdresatami.pobierzIdOstatniegoAdresata()<<endl;
-    system("pause");
+    string roboczy;
     adresat.ustawId((plikZAdresatami.pobierzIdOstatniegoAdresata())+1);
     adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
     system("CLS");
+
     cout << "Podaj imie: ";
     adresat.ustawImie(metodyPomocnicze.wczytajLinie());
-
-    adresat.ustawImie(metodyPomocnicze.wczytajLinie());
+    if(adresat.pobierzImie()=="")
+        adresat.ustawImie(metodyPomocnicze.wczytajLinie());
     adresat.ustawImie(metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzImie()));
 
     cout << "Podaj nazwisko: ";
@@ -169,13 +169,10 @@ void AdresatMenedzer::usunAdresata()
             if (znak == 't')
             {
                 numerLiniiUsuwanegoAdresata = plikZAdresatami.zwrocNumerLiniiSzukanegoAdresata(idUsuwanegoAdresata);
-                cout<<numerLiniiUsuwanegoAdresata<<endl;
-                system("pause");
-                //plikZAdresatami.usunWybranaLinieWPliku(numerLiniiUsuwanegoAdresata);
+                plikZAdresatami.usunWybranaLinieWPliku(numerLiniiUsuwanegoAdresata);
                 itr = adresaci.erase(itr);
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
                 system("pause");
-                //plikZAdresatami.ustawIdOstatniegoAdresata(plikZAdresatami.IdOstatniegoAdresata);
                 return;
             }
             else
