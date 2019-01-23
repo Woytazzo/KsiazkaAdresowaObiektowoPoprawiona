@@ -6,7 +6,6 @@
 #include <windows.h>
 #include <sstream>
 #include <fstream>
-
 #include "Uzytkownik.h"
 #include "Adresat.h"
 #include "PlikZUzytkownikami.h"
@@ -23,11 +22,11 @@ class UzytkownikMenedzer
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
 
-    public:
-        UzytkownikMenedzer(string nazwaPlikuZUzytkownikami): plikZUzytkownikami(nazwaPlikuZUzytkownikami){
-        uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-        idZalogowanegoUzytkownika=0;
-        };
+public:
+    UzytkownikMenedzer(string nazwaPlikuZUzytkownikami): plikZUzytkownikami(nazwaPlikuZUzytkownikami){
+    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+    idZalogowanegoUzytkownika=0;
+    };
     void rejestracjaUzytkownika();
     void wypiszWszystkieDaneUzytkownika();
     void wczytajUzytkownikowZPliku();
