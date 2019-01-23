@@ -144,7 +144,7 @@ void AdresatMenedzer::wyswietlIloscWyszukanychAdresatow(int iloscAdresatow)
     if (iloscAdresatow == 0)
         cout << endl << "W ksiazce adresowej nie ma adresatow z tymi danymi." << endl;
     else
-        cout << endl << "Ilosc adresatow w ksiazce adresowej wynosi: " << iloscAdresatow << endl << endl;
+        cout << endl << "Ilosc wyszukanych adresatow w ksiazce adresowej wynosi: " << iloscAdresatow << endl << endl;
 }
 
 void AdresatMenedzer::usunAdresata()
@@ -261,28 +261,23 @@ void AdresatMenedzer::edytujAdresata()
                 cout << "Podaj nowe imie: ";
                 itr -> ustawImie(metodyPomocnicze.wczytajLinie());
                 itr -> ustawImie(metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(itr -> pobierzImie()));
-                //zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
                 break;
             case '2':
                 cout << "Podaj nowe nazwisko: ";
                 itr -> ustawNazwisko(metodyPomocnicze.wczytajLinie());
                 itr -> ustawNazwisko(metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(itr -> pobierzNazwisko()));
-                //zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
                 break;
             case '3':
                 cout << "Podaj nowy numer telefonu: ";
                 itr -> ustawNumerTelefonu(metodyPomocnicze.wczytajLinie());
-                //zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
                 break;
             case '4':
                 cout << "Podaj nowy email: ";
                 itr -> ustawEmail(metodyPomocnicze.wczytajLinie());
-                //zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
                 break;
             case '5':
                 cout << "Podaj nowy adres zamieszkania: ";
                 itr -> ustawAdres(metodyPomocnicze.wczytajLinie());
-                //zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
                 break;
             case '6':
                 cout << endl << "Powrot do menu uzytkownika" << endl << endl;
@@ -330,5 +325,4 @@ void AdresatMenedzer::zaktualizujDaneEdytowanegoAdresata(Adresat adresat, int id
 
     cout << endl << "Dane zostaly zaktualizowane." << endl << endl;
 }
-
 

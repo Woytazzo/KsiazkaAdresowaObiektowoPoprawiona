@@ -2,7 +2,6 @@
 #define KSIAZKAADRESOWA_H
 
 #include <iostream>
-
 #include "UzytkownikMenedzer.h"
 #include "AdresatMenedzer.h"
 
@@ -13,13 +12,9 @@ class KsiazkaAdresowa
     UzytkownikMenedzer uzytkownikMenedzer;
     AdresatMenedzer *adresatMenedzer;
     const string nazwaPlikuZAdresatami;
-public:
-    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string NAZWAPLIKUZADRESATAMI)
-    : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), nazwaPlikuZAdresatami(NAZWAPLIKUZADRESATAMI) {};
-
-    ~KsiazkaAdresowa()
-    {delete adresatMenedzer;    }
-
+    char wybierzOpcjeZMenuUzytkownika();
+    char wczytajZnak();
+    char wybierzOpcjeZMenuGlownego();
     void rejestracjaUzytkownika();
     void wypiszWszystkieDaneUzytkownika();
     void logowanieUzytkownika();
@@ -31,6 +26,17 @@ public:
     void wyszukajAdresatowPoNazwisku();
     void usunAdresata();
     void edytujAdresata();
+    void menuUzytkownika();
+    void menuGlowne();
+
+public:
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string NAZWAPLIKUZADRESATAMI)
+    : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), nazwaPlikuZAdresatami(NAZWAPLIKUZADRESATAMI) {};
+
+    ~KsiazkaAdresowa()
+    {delete adresatMenedzer;    }
+
+    void menuKsiazkiAdresowej();
 };
 
 #endif

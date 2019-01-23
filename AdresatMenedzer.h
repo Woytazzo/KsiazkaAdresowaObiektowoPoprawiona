@@ -6,7 +6,6 @@
 #include <windows.h>
 #include <sstream>
 #include <fstream>
-
 #include "Adresat.h"
 #include "UzytkownikMenedzer.h"
 #include "PlikZUzytkownikami.h"
@@ -30,10 +29,10 @@ char wybierzOpcjeZMenuEdycja();
 void zaktualizujDaneEdytowanegoAdresata(Adresat adresat, int idEdytowanegoAdresata);
 
 public:
-AdresatMenedzer(string NAZWAPLIKUZADRESATAMI, int IDZALOGOWANEGOUZYTKOWNIKA): plikZAdresatami(NAZWAPLIKUZADRESATAMI){
-        idZalogowanegoUzytkownika=IDZALOGOWANEGOUZYTKOWNIKA;
-        adresaci=plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
-        };
+    AdresatMenedzer(string NAZWAPLIKUZADRESATAMI, int IDZALOGOWANEGOUZYTKOWNIKA): plikZAdresatami(NAZWAPLIKUZADRESATAMI){
+    idZalogowanegoUzytkownika=IDZALOGOWANEGOUZYTKOWNIKA;
+    adresaci=plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+    };
     void dodajAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
     void wyswietlWszystkichAdresatow();
